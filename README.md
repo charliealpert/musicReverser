@@ -3,12 +3,12 @@ Charlie Alpert
 
 To Run the Program:
 This will allow file ‘ciphered.wav’ to be reversed into ‘cipheredOutput.wav’
-Download SOX to convert files
-Use the command in the terminal/unix system to convert the file from . wav to .dat:  sox ciphered.wav ciphered.dat 
-Create file ‘cipheredOutput.dat’ to store converted material
-Edit configurations in Java IDE to say ‘array ciphered.dat cipheredOutput.dat’ or ‘list ciphered.dat cipheredOutput.dat’ depending if wanting to use array or list to run
-Use the command in the terminal/unix system to convert the file from . dat to .wav:  sox cipheredOutput.dat cipheredOutput.wav 
-Use these steps but change file names to reverse whatever file desired
+- Download SOX to convert files
+- Use the command in the terminal/unix system to convert the file from . wav to .dat:  sox ciphered.wav ciphered.dat 
+- Create file ‘cipheredOutput.dat’ to store converted material
+- Edit configurations in Java IDE to say ‘array ciphered.dat cipheredOutput.dat’ or ‘list ciphered.dat cipheredOutput.dat’ depending if wanting to use array or list to run
+- Use the command in the terminal/unix system to convert the file from . dat to .wav:  sox cipheredOutput.dat cipheredOutput.wav 
+- Use these steps but change file names to reverse whatever file desired
 
 
 ArrayStack: 
