@@ -1,5 +1,4 @@
 # musicReverser
-Charlie Alpert
 
 **To Run the Program**:
 This will allow file ‘ciphered.wav’ to be reversed into ‘cipheredOutput.wav’
