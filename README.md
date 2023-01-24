@@ -1,7 +1,7 @@
 # musicReverser
 Charlie Alpert
 
-To Run the Program:
+**To Run the Program**:
 This will allow file ‘ciphered.wav’ to be reversed into ‘cipheredOutput.wav’
 - Download SOX to convert files
 - Use the command in the terminal/unix system to convert the file from . wav to .dat:  sox ciphered.wav ciphered.dat 
@@ -11,7 +11,7 @@ This will allow file ‘ciphered.wav’ to be reversed into ‘cipheredOutput.wa
 - Use these steps but change file names to reverse whatever file desired
 
 
-ArrayStack: 
+**ArrayStack**: 
 	When deciding how I wanted to do my array stack. I was trying to decide whether I wanted my top value of the stack to be at the beginning or the end of the array. I also had to figure out whether the non-filled values in the array should be at the beginning or the end. My final solution relied on using an index to track the top of the stack to avoid having to move values everytime a new value was pushed on the stack. Therefore, my non-filled values of the stack will be at the end of the array.
 	The doubleArray method first checks if the array needs to be doubled. My array will only ever double if it is full of values and therefore more space in the stack is required. First a new array is created with twice the length of the original stack. The original stack is then looped through every value. The new stack is then filled with the previous values. A variable ‘i’ is used to keep track of what index each value will go in. Finally, after all the looping, the original stack is reassigned with the new doubled stack. This has a complexity of O(n) with n being the size of the original stack. However, the looping will only ever be implemented when the stack needs to be doubled.
 	The push method first calls the doubleArray method. Since the first check in the doubleArray method is whether or not the array needs to be doubled, this method will only fully execute when required. Then the value is inserted into the stack at the current index. The index is then incremented in preparation for another value to be pushed into the stack. Although the doubleArray method has a complexity of O(n). We can say that this method is O(1) since that complexity is already accounted for. The complexity of doubleArray will affect the program's total complexity.
@@ -21,7 +21,7 @@ ArrayStack:
 	The file’s complexity is O(n) because of the one loop in doubleArray. Most of the time when the file is used, the file will disregard that loop since it will only ever compute when the array is full. However since big O refers to the upper bound complexity of the program, O(n) is accurate to represent the worst case.
 	
 
-ListStack:
+**ListStack**:
 	When first implementing the linked list, I was attempting to use a doubly linked list where the head would be at the bottom of the stack. Then to pop, I would iterate through the stack to make the value before tail the new tail and remove the current tail from the stack. I realized how inefficient this would be since it required a loop every time I needed to pop. Instead, I realized that I could just make the head value my top of stack and push down previous values to point from head which eliminated any looping. 
 My push implementation works by creating a new node, assigning the next pointer of that new node to be the head, then reassigning head to be the new node. This pushes the new node into the head position then pushes the previous head down to the second position in the linked list. Anything connecting to the previous head will remain connected so that the new head now points to the rest of the list. When the previous head is null and a new node is added, then the list just becomes the head which will point to a null value indicating the end of the list. The push method has a complexity of O(1) since it will only run once with no looping. 
 The pop method works similarly to the push method. First it stores the previous head value (which will be removed) in a local variable so that it can be returned at the end without being lost. After checking to make sure the list is not empty, my program reassigns the head value with the next value in the list (head.next). Now the elements have been moved up and the previous head value is gone. Finally, it returns the previous head value that was stored in the local variable. This is also O(1).
